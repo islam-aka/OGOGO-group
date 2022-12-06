@@ -1,0 +1,58 @@
+.footer {
+  padding: 50px 0;
+  background: $dark;
+  color: white;
+  &__logo {
+    margin-bottom: 56px;
+    width: 49px;
+    height: 31px;
+    @include breakpoint(md) {
+      margin: 0 auto 56px;
+    }
+    img {
+      width: 49px;
+      height: 31px;
+    }
+  }
+  &__wrapper {
+    @include flex;
+  }
+  &__box {
+    width: 33%;
+    @include breakpoint(lg) {
+      width: 50%;
+      margin: 0 0 50px;
+    }
+    @include breakpoint(md) {
+      width: 100%;
+      margin: 0 auto 50px;
+      text-align: center;
+    }
+  }
+  &__text {
+    @include font($size: 24px, $weight: 400, $family: $gotham, $color: white);
+  }
+  &__description {
+    @include font($size: 14px, $weight: 400, $family: $gotham, $color: white);
+    opacity: 0.5;
+  }
+  &__network {
+    width: 200px;
+    margin: 0 auto;
+    @include breakpoint(lg) {
+      margin: 0;
+    }
+    @include breakpoint(md) {
+      margin: 0 auto;
+      text-align: left;
+    }
+    p {
+      @include font($size: 24px, $weight: 400, $family: $gotham, $color: white);
+      svg {
+        width: 22px;
+        height: 22px;
+        margin-right: 25px;
+      }
+    }
+  }
+}

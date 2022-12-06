@@ -1,0 +1,46 @@
+.vacancies {
+  padding: 50px 0;
+  background: $dark;
+  @include breakpoint(sm) {
+    text-align: center;
+  }
+  .subtitle {
+    color: $orange;
+  }
+  &__text {
+    @include font($size: 28px, $weight: 400, $family: $gilroy, $color: white);
+    margin-bottom: 50px;
+  }
+  &__wrapper {
+    @include flex;
+    @include breakpoint(md) {
+      justify-content: space-around;
+    }
+  }
+  &__box {
+    margin-bottom: 20px;
+    width: 260px;
+    height: 320px;
+    position: relative;
+    cursor: pointer;
+    @include breakpoint(sm) {
+      margin: 0 auto 20px;
+    }
+    &--text {
+      position: absolute;
+      content: "";
+      left: 20px;
+      bottom: 20px;
+      p {
+        @include font($size: 20px, $weight: 700, $family: $gilroy, $color: white);
+      }
+      span {
+        @include font($size: 15px, $weight: 400, $family: $gilroy, $color: white);
+      }
+    }
+    img {
+      width: 260px;
+      height: 320px;
+    }
+  }
+}

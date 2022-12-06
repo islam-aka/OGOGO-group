@@ -1,0 +1,134 @@
+.header {
+  padding: 0 15px;
+  .container {
+    min-height: 70px;
+    @include flex;
+    padding: 34px 0;
+  }
+  &__logo {
+    img {
+      width: 65px;
+      height: 42px;
+    }
+  }
+  &__navbar {
+    @include breakpoint(lg) {
+      position: fixed;
+      top: 0;
+      right: -350px;
+      width: 300px;
+      height: 100%;
+      background: $orange;
+      transition: 0.5s;
+      z-index: 85;
+      &.active {
+        transition: 0.5s;
+        right: 0;
+      }
+    }
+  }
+  &__list {
+    @include flex;
+    @include breakpoint(lg) {
+      flex-direction: column;
+      padding-top: 90px;
+    }
+  }
+  &__item {
+    list-style-type: none;
+    margin-left: 36px;
+    &:nth-last-child(1) {
+      margin-left: 97px;
+      @include breakpoint(lg) {
+        margin-left: 0;
+      }
+    }
+    @include breakpoint(lg) {
+      margin-left: 0;
+      margin-bottom: 40px;
+      &:hover {
+        border-bottom: 1px solid white;
+      }
+      &:nth-last-child(1) {
+        margin-top: 40px;
+        &:hover {
+          border: none;
+        }
+      }
+    }
+  }
+  &__link {
+    text-decoration: none;
+    @include font($size: 18px, $weight: 400, $family: $gilroy, $color: white);
+    &:hover, &.active {
+      border-bottom: 1px solid white;
+    }
+  }
+  &__burger {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    z-index: 98;
+    position: relative;
+    display: none;
+    @include breakpoint(lg) {
+      display: block;
+    }
+    &::after,
+    span,
+    &::before {
+      width: 90%;
+      height: 8%;
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      background: white;
+      left: 50%;
+      transform: translate(-50%);
+      transition: 0.5s;
+    }
+    &::after {
+      top: 23%;
+    }
+    span {
+      top: 43%;
+    }
+    &::before {
+      top: 63%;
+    }
+    &.active {
+      &::after {
+        top: 43%;
+        transition: 0.5s;
+        transform: rotate(-43deg);
+        left: 8%;
+      }
+      span {
+        top: 43%;
+        transition: 0.5s;
+        opacity: 0;
+      }
+      &::before {
+        top: 43%;
+        left: 8%;
+        transition: 0.5s;
+        transform: rotate(43deg);
+      }
+    }
+  }
+  &__popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 80;
+    height: 100%;
+    background: rgba(black, 0.7);
+    cursor: pointer;
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+}

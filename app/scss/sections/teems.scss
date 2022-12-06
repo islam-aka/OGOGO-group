@@ -1,0 +1,36 @@
+.teems {
+  padding: 48px 0 59px;
+  .subtitle {
+    margin-bottom: 57px;
+    @include breakpoint(lg) {
+      text-align: center;
+    }
+  }
+  &__wrapper {
+    @include flex;
+    align-items: flex-start;
+    @include breakpoint(sm) {
+      flex-direction: column;
+    }
+  }
+  &__box {
+    text-align: center;
+    margin: 0 0 20px;
+    width: 250px;
+    @include breakpoint(sm) {
+      margin: 0 auto 20px;
+    }
+    img {
+      width: 250px;
+      height: 250px;
+      margin-bottom: 23px;
+    }
+  }
+  &__name {
+    margin-bottom: 5px;
+    @include font($size: 32px, $weight: 700, $family: $gilroy, $color: black);
+  }
+  &__role {
+    @include font($size: 20px, $weight: 700, $family: $gilroy, $color: black);
+  }
+}

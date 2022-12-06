@@ -1,0 +1,49 @@
+.academy {
+  padding: 50px 0;
+  background: $dark;
+  .container {
+    @include flex;
+    flex-wrap: nowrap;
+    @include breakpoint(xl) {
+      flex-direction: column-reverse;
+    }
+  }
+  &__content {
+    text-align: right;
+    @include breakpoint(xl) {
+      text-align: center;
+    }
+  }
+  .subtitle {
+    color: $orange;
+    margin-bottom: 107px;
+  }
+  &__video {
+    width: 530px;
+    height: 330px;
+    border-radius: 20px;
+    @include breakpoint(xl) {
+      margin-top: 50px;
+    }
+    @include breakpoint(sm) {
+      width: 350px;
+      height: 350px;
+    }
+    @include breakpoint(xs) {
+      width: 310px;
+      height: 310px;
+    }
+  }
+  &__text {
+    @include text;
+    color: white;
+    max-width: 500px;
+    margin-bottom: 100px;
+    @include breakpoint(xl) {
+      margin-bottom: 40px;
+    }
+    strong {
+      color: $orange;
+    }
+  }
+}

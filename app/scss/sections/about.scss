@@ -1,0 +1,109 @@
+.about {
+  padding: 80px 0;
+  position: relative;
+  @include breakpoint(sm) {
+    text-align: center;
+  }
+  .subtitle {
+    margin-bottom: 61px;
+    @include breakpoint(lg) {
+      text-align: center;
+    }
+  }
+  &__wrapper {
+    margin-bottom: 17px;
+    overflow: hidden;
+    position: relative;
+    @include breakpoint(lg) {
+      display: none;
+    }
+    &--btns {
+      @include breakpoint(lg) {
+        display: none;
+      }
+      button {
+        border: none;
+        background: none;
+        cursor: pointer;
+        position: absolute;
+        top: 40%;
+        content: "";
+        img {
+          width: 44px;
+          height: 44px;
+        }
+      }
+    }
+    &--prev {
+      left: 20px;
+    }
+    &--next {
+      right: 20px;
+    }
+  }
+  .glider-dots {
+    margin-bottom: 90px;
+    @include breakpoint(lg) {
+      display: none;
+    }
+  }
+  .glider-dot {
+    width: 15px;
+    height: 15px;
+    &.active {
+      background: $orange;
+    }
+  }
+  &__box,
+  .glider-slide {
+    margin-right: 20px;
+    img {
+      width: 415px;
+      height: 352px;
+    }
+    &--small {
+      img {
+        width: 285px;
+        height: 352px;
+      }
+    }
+  }
+  &__text {
+    @include text;
+  }
+  &__phone {
+    display: none;
+    width: 310px;
+    height: 310px;
+    overflow: hidden;
+    margin: 0 auto 40px;
+    @include breakpoint(lg) {
+      display: block;
+    }
+    &--track {
+      @include flex;
+      flex-wrap: nowrap;
+      transition: 0.5s;
+    }
+    &--box {
+      margin-bottom: 40px;
+      margin-right: 20px;
+      img {
+        width: 310px;
+        height: 310px;
+      }
+    }
+    &--btns {
+      text-align: center;
+      margin-bottom: 20px;
+      display: none;
+      @include breakpoint(lg) {
+        display: block;
+      }
+      button {
+        background: none;
+        border: none;
+      }
+    }
+  }
+}

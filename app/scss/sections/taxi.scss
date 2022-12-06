@@ -1,0 +1,48 @@
+.taxi {
+  padding: 50px 0;
+  background: $dark;
+  color: white;
+  .container {
+    @include flex;
+    flex-wrap: nowrap;
+    @include breakpoint(lg) {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+  &__content--img {
+    display: none;
+    @include breakpoint(sm) {
+      img {
+        width: 167px;
+        height: 338px;
+      }
+    }
+    @include breakpoint(lg) {
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+  .subtitle {
+    color: $orange;
+    margin-bottom: 107px;
+  }
+  &__text {
+    @include text;
+    margin-bottom: 64px;
+    max-width: 665px;
+    strong,
+    q {
+      color: $orange;
+    }
+  }
+  &__img {
+    @include breakpoint(lg) {
+      display: none;
+    }
+    img {
+      width: 334px;
+      height: 677px;
+    }
+  }
+}

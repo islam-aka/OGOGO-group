@@ -1,0 +1,36 @@
+.development {
+  padding: 50px 0;
+  background: $dark;
+  .container {
+    @include flex;
+    flex-wrap: nowrap;
+    @include breakpoint(lg) {
+      text-align: center;
+    }
+  }
+  .subtitle {
+    color: $orange;
+    margin-bottom: 76px;
+  }
+  &__text {
+    @include text;
+    color: white;
+    margin-bottom: 64px;
+    strong {
+      color: $orange;
+    }
+  }
+  &__img {
+    @include breakpoint(lg) {
+      display: none;
+    }
+    min-width: 500px;
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    img {
+      margin: 10px 15px;
+    }
+  }
+}
